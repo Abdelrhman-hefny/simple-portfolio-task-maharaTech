@@ -1,0 +1,58 @@
+#birthday {
+  text-align: center;
+  padding: 40px 20px;
+
+  .birthday-container {
+    margin-top: 20px;
+    position: relative;
+
+    img.birthday-image {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 12px;
+      transition: opacity 0.5s ease;
+    }
+
+    .birthday-message {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      textarea {
+        width: 80%;
+        height: 120px;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        resize: none;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+
+    .thank-you {
+      font-size: 1.5rem;
+      color: green;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}

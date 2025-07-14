@@ -1,0 +1,58 @@
+#cv {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+
+    .skill-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      width: 100px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  p {
+    margin-top: 30px;
+
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

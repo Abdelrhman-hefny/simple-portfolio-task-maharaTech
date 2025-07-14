@@ -1,0 +1,117 @@
+// start Header
+header {
+  padding: 14px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fffefe;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 33;
+  position: fixed;
+
+  .logo {
+    max-width: 150px;
+    font-size: 24px;
+
+    &:hover {
+      color: #007bff;
+      transform: scale(1.05);
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav {
+    .nav-list {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        position: relative;
+        padding: 10px 7px;
+
+        a {
+          color: #333;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+
+        &:hover a {
+          color: #007bff;
+          transform: scale(1.05);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: #007bff;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // 📱 Responsive
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    nav {
+      width: 100%;
+      position: absolute;
+      z-index: 999;
+      top: 60px;
+      left: 0;
+      background-color: #fffefe;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        li {
+          padding: 10px 20px;
+          width: 100%;
+          &:hover::after {
+            width: 30%;
+          }
+        }
+      }
+
+      &.open .nav-list {
+        display: flex;
+      }
+    }
+  }
+}
+// end Header

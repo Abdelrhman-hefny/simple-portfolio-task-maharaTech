@@ -1,0 +1,47 @@
+#sider {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+
+  p {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+#sider .slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 200%; // أو width: calc(100% * عدد الصور);
+}
+
+#sider .slide {
+  min-width: 50%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+#sider .slide img {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+#sider .slide h3 {
+  position: absolute;
+  top: 20px;
+  left: 62%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 2rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+}

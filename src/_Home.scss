@@ -1,0 +1,112 @@
+#Home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  min-height: var(--min-height);
+  position: relative;
+  margin-top: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../assist/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  .left {
+    flex: 1;
+    padding: 20px;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin: 30px 0;
+      max-width: 90%;
+    }
+
+    .icon {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      width: fit-content;
+
+      img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      div {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 30% 70% 70% 30% / 30% 25% 75% 70%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+
+    .left,
+    .right {
+      flex: unset;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .left {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 20px auto;
+      }
+
+      .icon {
+        justify-content: center;
+        margin: auto;
+      }
+    }
+
+    .right {
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+}
